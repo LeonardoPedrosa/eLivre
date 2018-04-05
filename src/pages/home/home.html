@@ -1,14 +1,51 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      <img src="assets/icon/cone.png"/>
+      e-Livre
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+   
+      <div #map id="map">
+
+
+      </div>
+
+      <div class="cadastro-ocorrencia">
+          <ion-item>
+              <ion-label color="primary" floating >Comentário</ion-label>
+              <ion-input [(ngModel)]="ocorrencia.comentario"></ion-input>
+          </ion-item>
+        
+        <div class="voto">
+          <img src="assets/icon/like.png" (click)="like(ocorrencia)">
+          <img src="assets/icon/dislike.png" (click)="dislike(ocorrencia)">
+          <!-- <button ion-button block>Cadastrar ocorrência</button> -->
+        </div>
+      </div>
+
+      <!-- <ion-segment [(ngModel)]="abas">
+        <ion-segment-button value="op1">
+          Principal
+        </ion-segment-button>
+        <ion-segment-button value="op2">
+          Feeds
+        </ion-segment-button>
+      </ion-segment>
+      
+      <div [ngSwitch]="abas" >
+          <ion-list *ngSwitchCase="'op1'">
+            
+            
+          </ion-list>
+
+          <ion-list *ngSwitchCase="'op2'">
+            <h1>Página de feeds</h1>
+          </ion-list>
+      </div> -->
+
+  
 </ion-content>
